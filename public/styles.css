@@ -25,9 +25,9 @@ html, body {
 }
 
 .note-title {
-  height: 50px;
+  height: 200px;
   margin-top: 13px;
-  font-size: 11vw;
+  font-size: 5vw;
 }
 
 .note-title:read-only, .note-textarea:read-only {
