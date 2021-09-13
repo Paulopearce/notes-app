@@ -201,6 +201,12 @@ document.getElementById('saveNote').addEventListener('click', event => {
     }
   })
 
+  document.getElementById('newNote').addEventListener('click', event => {
+    event.preventDefault()
+    document.getElementById('noteTitle').value = ''
+    document.getElementById('noteText').value = ''
+  })
+
   //Delete
   document.addEventListener('click', event => {
     if (event.target.className === 'delete') {
