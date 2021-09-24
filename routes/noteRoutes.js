@@ -25,18 +25,13 @@ router.post('/api/notes', (req, res) => {
 
 router.delete('/api/notes/:id', (req, res) => {
   let id = req.params.id
-  console.log(id)
   fs.readFile('db/db.json',  (err,data) =>{
     if(err){console.log(err)}
-    console.log()
     data = JSON.parse(data).filter(note => note.text !== id)
     fs.writeFile('db/db.json', JSON.stringify(data), err =>{
   	  if(err){console.log(err)}
 	  })
-
 	})
-
-  
   res.sendStatus(200)
 })
 //backup url
